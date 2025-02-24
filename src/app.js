@@ -21,7 +21,7 @@ const domainNameGen = () => {
     for(let x = 0; x < adjArr.length; x++) {
       for (let y = 0; y < nounArr.length; y++) {
         for(let z = 0; z < domainArr.length; z++){
-          combo += `${pronounArr[i]}${adjArr[x]}${nounArr[y]}${domainArr[z]}<br>`;
+          combo += `<li>${pronounArr[i]}${adjArr[x]}${nounArr[y]}${domainArr[z]}<br></li>`;
           
         }
       }
