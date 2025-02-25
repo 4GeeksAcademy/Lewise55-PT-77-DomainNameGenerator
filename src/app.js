@@ -5,28 +5,28 @@ import "./style.css";
 import "./assets/img/rigo-baby.jpg";
 import "./assets/img/4geeks.ico";
 
+
 window.onload = function() {
-  //write your code here
-  domainNameGen ();
+  //changed the theme of the loop from domain names to cocktail names
+  cocktailName();
 };
-const domainNameGen = () => {
- const pronounArr = ['i', 'you', 'he', 'she', 'the', 'them'];
- const adjArr = ['excellent', 'easy', 'great', 'amazing', 'lush', 'nice'];
- const nounArr = ['actor', 'tiger', 'cat', 'dog', 'lizzard', 'chimp', 'athlete', 'doctor']
- const domainArr = ['.com', '.net', '.org', '.gov', '.edu', '.us', '.mil', '.info', '.biz', '.arpa', '.io', '.online', '.site', '.me', '.ai'];
- 
- let combo = "";
-  
-  for(let i = 0; i < pronounArr.length; i++){
-    for(let x = 0; x < adjArr.length; x++) {
-      for (let y = 0; y < nounArr.length; y++) {
-        for(let z = 0; z < domainArr.length; z++){
-          combo += `<li>${pronounArr[i]}${adjArr[x]}${nounArr[y]}${domainArr[z]}<br></li>`;
-          
-        }
+// updated const's & elements
+const cocktailName = () => {
+  const colors = ['blue', 'white', 'black', 'green', 'red', 'pink', 'purple', 'gold', 'orange'];
+  const flavors = ['sour', 'sweet', 'salted', 'tangy', 'spicy', 'sugar', 'chocolate', 'carmel', 'cherry', 'pineapple', 'watermelon'];
+  const drinks = ['punch', 'margarita', 'martini', 'whisky', 'rum', 'long island', 'mule', 'wine', 'beer', 'cooler', 'spiked tea', 'champagne'];
+
+  let cocktails = "";
+
+  // changed from for to for of loop
+  for(const color of colors) {
+    for(const flavor of flavors) {
+      for(const drink of drinks) {
+        cocktails += `${color} ${flavor} ${drink}<br>`;
       }
     }
   }
-  document.querySelector(".line").innerHTML = combo;
-  console.log(combo)
-}
+  document.querySelector(".cocktail").innerHTML = cocktails;
+  console.log(cocktails);
+  
+};
